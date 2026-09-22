@@ -1,0 +1,221 @@
+:root {
+            --dark: #142331;
+            --orange: #df643c;
+            --muted: #667682;
+            --line: #dce3e6
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--dark);
+            background: #f7f8f6
+        }
+
+        .navbar,
+        .hero,
+        footer {
+            background: var(--dark)
+        }
+
+        .navbar .nav-link {
+            color: #c7d2d9
+        }
+
+        .navbar .nav-link:hover {
+            color: white
+        }
+
+        .logo {
+            background: var(--orange);
+            border-radius: 8px;
+            padding: 6px 11px;
+            color: white
+        }
+
+        .hero {
+            color: white;
+            padding: 95px 0
+        }
+
+        .hero h1 {
+            font-size: clamp(2.6rem, 5vw, 4.6rem);
+            font-weight: 800;
+            letter-spacing: -.05em;
+            line-height: 1.08
+        }
+
+        .hero p {
+            color: #b9c7d0
+        }
+
+        .accent {
+            color: #f28b68
+        }
+
+        .btn-accent {
+            background: var(--orange);
+            color: white;
+            border: 0;
+            font-weight: bold
+        }
+
+        .btn-accent:hover {
+            background: #c94e28;
+            color: white
+        }
+
+        .eyebrow {
+            color: var(--orange);
+            font-size: .75rem;
+            font-weight: 800;
+            letter-spacing: .15em;
+            text-transform: uppercase
+        }
+
+        section {
+            padding: 80px 0
+        }
+
+        .section-title {
+            font-weight: 800;
+            letter-spacing: -.035em
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        .panel {
+            background: #1d3041;
+            border: 1px solid #ffffff24;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 20px 55px #0003
+        }
+
+        .ticket {
+            background: #ffffff0a;
+            border: 1px solid #ffffff20;
+            border-radius: 9px;
+            padding: 14px;
+            margin-top: 10px
+        }
+
+        .ticket small {
+            color: #afbec8
+        }
+
+        .tag {
+            border-radius: 30px;
+            padding: 5px 10px;
+            font-size: .72rem;
+            font-weight: bold
+        }
+
+        .high {
+            background: #f4d5c8;
+            color: #8e361d
+        }
+
+        .mid {
+            background: #f4e8be;
+            color: #735713
+        }
+
+        .done {
+            background: #d5eee3;
+            color: #256e50
+        }
+
+        .soft {
+            background: #eaf0f1
+        }
+
+        .feature,
+        .person,
+        .asset {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 11px;
+            padding: 25px;
+            height: 100%
+        }
+
+        .feature {
+            transition: transform .2s, border-color .2s
+        }
+
+        .feature:hover {
+            transform: translateY(-4px);
+            border-color: #b9cbd2
+        }
+
+        .feature i,
+        .asset i {
+            font-size: 1.5rem;
+            color: var(--orange)
+        }
+
+        .feature h3 {
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-top: 18px
+        }
+
+        .feature p,
+        .person p {
+            color: var(--muted);
+            font-size: .9rem;
+            margin-bottom: 0
+        }
+
+        .step {
+            border-top: 2px solid #d2dce0;
+            padding-top: 20px
+        }
+
+        .step b {
+            color: var(--orange);
+            font-size: .8rem
+        }
+
+        .person {
+            border-top: 3px solid var(--orange)
+        }
+
+        .initial {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            background: #eaf0f1;
+            border-radius: 9px;
+            font-weight: bold;
+            margin-bottom: 20px
+        }
+
+        .callout {
+            background: var(--dark);
+            color: white;
+            border-radius: 14px;
+            padding: 35px
+        }
+
+        footer {
+            color: #afbec8;
+            padding: 30px 0
+        }
+
+        @media(max-width:767px) {
+            .hero {
+                padding: 65px 0
+            }
+
+            section {
+                padding: 60px 0
+            }
+        }
