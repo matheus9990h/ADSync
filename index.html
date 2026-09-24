@@ -1,314 +1,647 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ADSync | Manutenção conectada à produção</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-
-</head>
-
-<body>
-    <!-- MENU -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-3">
-        <div class="container"><a class="navbar-brand fw-bold" href="#inicio">
-            <img src="img/NexServise-laranja.png" class="img-fluid hero-image"
-                    width="125" alt="Logo NexService">
-            <span
-                    class="accent"></span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#menu" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="menu">
-                <div class="navbar-nav ms-auto gap-lg-3"><a class="nav-link" href="#desafio">O desafio</a><a
-                        class="nav-link" href="#solucao">A solução</a><a class="nav-link" href="#fluxo">Como
-                        funciona</a><a class="nav-link" href="#equipe">Equipe</a></div>
-            </div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="NexService: tecnologia para manuten&ccedil;&atilde;o, automa&ccedil;&atilde;o e gest&atilde;o industrial." name="description"/>
+  <title>
+   NexService | Tecnologia para a ind&uacute;stria
+  </title>
+  <!-- Bootstrap é a base do layout; style.css contém somente a identidade visual. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- MENU -->
+  <nav aria-label="Navega&ccedil;&atilde;o principal" class="navbar navbar-expand-lg navbar-dark sticky-top py-2">
+   <div class="container">
+    <a class="navbar-brand" href="#inicio">
+     <img alt="NexService" class="brand-logo" src="img/NexServise-laranja.png" width="145"/>
+    </a>
+    <button aria-controls="menu" aria-expanded="false" aria-label="Abrir menu" class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse" type="button">
+     <span class="navbar-toggler-icon">
+     </span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+     <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+      <a class="nav-link" href="#empresa">
+       Empresa
+      </a>
+      <a class="nav-link" href="#numeros">
+       Em n&uacute;meros
+      </a>
+      <a class="nav-link" href="#solucoes">
+       Solu&ccedil;&otilde;es
+      </a>
+      <a class="nav-link" href="#atuacao">
+       Atua&ccedil;&atilde;o
+      </a>
+      <a class="nav-link" href="#parcerias">
+       Parcerias
+      </a>
+      <a class="nav-link" href="#equipe">
+       Equipe
+      </a>
+      <a class="btn btn-accent btn-sm px-3 ms-lg-2 mt-2 mt-lg-0" href="#contato">
+       Contato
+      </a>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <main>
+   <!-- APRESENTAÇÃO INSTITUCIONAL -->
+   <header class="hero" id="inicio">
+    <div class="container">
+     <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+       <div class="eyebrow mb-3">
+        NexService &middot; Tecnologia industrial
+       </div>
+       <h1>
+        Conectamos tecnologia &agrave;
+        <span class="accent">
+         rotina da ind&uacute;stria.
+        </span>
+       </h1>
+       <p class="fs-5 mt-4 mb-4 hero-lead">
+        Desenvolvemos solu&ccedil;&otilde;es digitais para organizar a manuten&ccedil;&atilde;o, integrar processos e apoiar decis&otilde;es no ch&atilde;o de f&aacute;brica.
+       </p>
+       <div class="d-flex flex-wrap gap-3">
+        <a class="btn btn-accent px-4 py-3" href="#empresa">
+         Conhe&ccedil;a a NexService
+        </a>
+        <a class="btn btn-outline-light px-4 py-3" href="#solucoes">
+         Nossas solu&ccedil;&otilde;es
+        </a>
+       </div>
+       <div class="small mt-5 hero-note">
+        <i class="bi bi-geo-alt me-2">
+        </i>
+        Ribeir&atilde;o Preto, S&atilde;o Paulo &middot; Desde 2023
+       </div>
+      </div>
+      <div class="col-lg-5">
+       <div class="hero-panel">
+        <div class="d-flex justify-content-between align-items-center pb-3 border-bottom border-secondary">
+         <span class="small text-uppercase panel-kicker">
+          &Aacute;reas de atua&ccedil;&atilde;o
+         </span>
+         <i class="bi bi-buildings fs-4 accent">
+         </i>
         </div>
-    </nav>
-
-    <!-- HERO -->
-    <header class="hero" id="inicio">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-7">
-                    <div class="eyebrow mb-3">Gestão de manutenção industrial</div>
-                    <h1>Menos tempo parado.<br><span class="accent">Mais produção em movimento.</span></h1>
-                    <p class="fs-5 mt-4 mb-4">Uma forma mais simples de abrir chamados, organizar ordens de serviço e
-                        transformar cada manutenção em informação útil para a fábrica.</p><a href="#solucao"
-                        class="btn btn-accent px-4 py-3 me-2">Conheça a solução <i
-                            class="bi bi-arrow-right ms-2"></i></a><a href="#fluxo"
-                        class="btn btn-outline-light px-4 py-3">Entenda o fluxo</a>
-                    <div class="mt-5 small" style="color:#b9c7d0">● Projeto Integrador · Análise e Desenvolvimento de
-                        Sistemas</div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="panel">
-                        <div
-                            class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
-                            <strong>Ordens de serviço</strong><small style="color:#b9c7d0">Exemplo visual</small>
-                        </div>
-                        <div class="ticket d-flex justify-content-between align-items-center gap-2">
-                            <div><small>OS-001 · Ensacadeira 01</small>
-                                <div class="fw-bold">Falha no acionamento</div>
-                            </div><span class="tag high">Alta</span>
-                        </div>
-                        <div class="ticket d-flex justify-content-between align-items-center gap-2">
-                            <div><small>OS-002 · Costura 04</small>
-                                <div class="fw-bold">Ajuste de funcionamento</div>
-                            </div><span class="tag mid">Média</span>
-                        </div>
-                        <div class="ticket d-flex justify-content-between align-items-center gap-2">
-                            <div><small>OS-003 · Triturador</small>
-                                <div class="fw-bold">Inspeção concluída</div>
-                            </div><span class="tag done">Concluída</span>
-                        </div>
-                        <p class="small mb-0 mt-4"><i class="bi bi-clock-history me-2"></i>Cada atendimento deixa um
-                            histórico.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-panel-row">
+         <span>
+          <i class="bi bi-tools me-3 accent">
+          </i>
+          Gest&atilde;o de manuten&ccedil;&atilde;o
+         </span>
         </div>
-    </header>
-    <!-- PROBLEMA -->
-    <section id="desafio">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-5">
-                    <div class="eyebrow mb-3">O desafio</div>
-                    <h2 class="section-title display-6">Quando o chamado não é registrado, o problema se repete.</h2>
-                    <p class="muted mt-3">O acionamento informal dificulta saber o que parou, quem está atendendo e
-                        quais falhas já aconteceram.</p>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <div class="feature"><i class="bi bi-exclamation-triangle"></i>
-                                <h3>Paradas inesperadas</h3>
-                                <p>Falhas interrompem a produção sem um fluxo estruturado.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="feature"><i class="bi bi-person-walking"></i>
-                                <h3>Deslocamentos</h3>
-                                <p>Cerca de 350 metros separam a produção e a manutenção.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="feature"><i class="bi bi-journal-x"></i>
-                                <h3>Histórico incompleto</h3>
-                                <p>Sem registros, fica difícil identificar falhas recorrentes.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="feature"><i class="bi bi-tools"></i>
-                                <h3>Manutenção reativa</h3>
-                                <p>O foco corretivo dificulta planejar ações preventivas.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-panel-row">
+         <span>
+          <i class="bi bi-cpu me-3 accent">
+          </i>
+          Automa&ccedil;&atilde;o industrial
+         </span>
         </div>
-    </section>
-    <!-- SOLUÇÃO -->
-    <section class="soft" id="solucao">
-        <div class="container">
-            <div class="eyebrow mb-3">A proposta ADSync</div>
-            <h2 class="section-title display-6">Do chamado à decisão, tudo no mesmo fluxo.</h2>
-            <p class="muted mb-5">Um sistema web pensado para quem está na linha e para quem precisa manter os
-                equipamentos funcionando.</p>
-            <div class="row g-3">
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature"><i class="bi bi-clipboard-plus"></i>
-                        <h3>Abertura de O.S.</h3>
-                        <p>Equipamento, falha, data e criticidade em um registro.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature"><i class="bi bi-list-check"></i>
-                        <h3>Acompanhamento</h3>
-                        <p>Chamados organizados por prioridade, responsável e status.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature"><i class="bi bi-clock-history"></i>
-                        <h3>Histórico por equipamento</h3>
-                        <p>Registro da causa, tempo, serviço e peças utilizadas.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature"><i class="bi bi-calendar-check"></i>
-                        <h3>Preventivas</h3>
-                        <p>Planejamento de inspeções e intervenções futuras.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature"><i class="bi bi-bar-chart-line"></i>
-                        <h3>Indicadores</h3>
-                        <p>MTTR, MTBF e percentual de manutenção preventiva.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature"><i class="bi bi-phone"></i>
-                        <h3>Acesso na linha</h3>
-                        <p>Interface responsiva para celular e computador.</p>
-                    </div>
-                </div>
-            </div>
-            <p class="small muted mt-4">Funcionalidades previstas: esta página apresenta o projeto, não um sistema de
-                O.S. já implantado.</p>
+        <div class="hero-panel-row">
+         <span>
+          <i class="bi bi-diagram-3 me-3 accent">
+          </i>
+          Integra&ccedil;&atilde;o de processos
+         </span>
         </div>
-    </section>
-    <!-- FLUXO -->
-    <section id="fluxo">
-        <div class="container">
-            <div class="eyebrow mb-3">Fluxo de trabalho</div>
-            <h2 class="section-title display-6 mb-5">Simples para quem abre. Claro para quem atende.</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="step"><b>01 / REGISTRAR</b>
-                        <h3 class="h5 fw-bold mt-3">A produção informa</h3>
-                        <p class="muted small">O chamado nasce com equipamento e descrição da falha.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="step"><b>02 / PRIORIZAR</b>
-                        <h3 class="h5 fw-bold mt-3">A manutenção organiza</h3>
-                        <p class="muted small">Criticidade e responsável orientam o atendimento.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="step"><b>03 / EXECUTAR</b>
-                        <h3 class="h5 fw-bold mt-3">O técnico registra</h3>
-                        <p class="muted small">Tempo, causa, serviço e peças ficam documentados.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="step"><b>04 / APRENDER</b>
-                        <h3 class="h5 fw-bold mt-3">O histórico orienta</h3>
-                        <p class="muted small">Os dados apoiam indicadores e preventivas.</p>
-                    </div>
-                </div>
-            </div>
+        <p class="small mb-0 mt-3 hero-note">
+         Solu&ccedil;&otilde;es pensadas para a realidade de pequenas e m&eacute;dias ind&uacute;strias.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header>
+   <!-- EMPRESA E HISTÓRIA -->
+   <section id="empresa">
+    <div class="container">
+     <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+       <div class="eyebrow mb-3">
+        Quem somos
+       </div>
+       <h2 class="section-title display-6">
+        Uma empresa que conhece o valor de cada minuto de produ&ccedil;&atilde;o.
+       </h2>
+       <p class="muted mt-3">
+        Fundada em 2023, em Ribeir&atilde;o Preto, a NexService surgiu para aproximar solu&ccedil;&otilde;es tecnol&oacute;gicas das necessidades de pequenas e m&eacute;dias ind&uacute;strias. Come&ccedil;amos com a organiza&ccedil;&atilde;o digital de processos e ampliamos nossa atua&ccedil;&atilde;o para manuten&ccedil;&atilde;o, monitoramento e automa&ccedil;&atilde;o.
+       </p>
+       <p class="muted">
+        Nosso trabalho combina desenvolvimento de sistemas e conhecimento da rotina industrial, com foco em ferramentas acess&iacute;veis, simples de utilizar e capazes de crescer com cada opera&ccedil;&atilde;o.
+       </p>
+      </div>
+      <div class="col-lg-7">
+       <div class="row g-3">
+        <div class="col-sm-6">
+         <div class="feature h-100">
+          <i class="bi bi-bullseye">
+          </i>
+          <h3>
+           Miss&atilde;o
+          </h3>
+          <p>
+           Tornar a gest&atilde;o industrial mais clara, conectada e acess&iacute;vel por meio da tecnologia.
+          </p>
+         </div>
         </div>
-    </section>
-    <!-- EQUIPAMENTOS -->
-    <section class="soft" id="equipamentos">
-        <div class="container">
-            <div class="eyebrow mb-3">Aplicação na fábrica</div>
-            <h2 class="section-title display-6 mb-4">Feito para equipamentos reais.</h2>
-            <div class="row g-3">
-                <div class="col-6 col-lg-3">
-                    <div class="asset"><i class="bi bi-gear-wide-connected"></i>
-                        <div class="fs-2 fw-bold mt-3">09</div>
-                        <div class="small muted">Máquinas de costura</div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <div class="asset"><i class="bi bi-box-seam"></i>
-                        <div class="fs-2 fw-bold mt-3">02</div>
-                        <div class="small muted">Linhas de ensacadeira</div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <div class="asset"><i class="bi bi-nut"></i>
-                        <div class="fs-2 fw-bold mt-3">01</div>
-                        <div class="small muted">Triturador com peneiras e sensores</div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <div class="asset"><i class="bi bi-cpu"></i>
-                        <div class="fs-2 fw-bold mt-3">+</div>
-                        <div class="small muted">Motores e redutores</div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-sm-6">
+         <div class="feature h-100">
+          <i class="bi bi-eye">
+          </i>
+          <h3>
+           Vis&atilde;o
+          </h3>
+          <p>
+           Ampliar o acesso de ind&uacute;strias a ferramentas digitais para manuten&ccedil;&atilde;o e opera&ccedil;&atilde;o.
+          </p>
+         </div>
         </div>
-    </section>
-    <!-- EQUIPE -->
-    <section class="bg-white border-top border-bottom py-4" aria-label="Clientes">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center gap-4 gap-lg-5 text-center">
-                <small class="text-uppercase fw-semibold text-secondary">Colaboradores</small>
-                <img src="img/SENAI_logo_2024.png" class="img-fluid hero-image"
-                    width="300" alt="Logo SENAI">
-                <img src="img/SESI_logo_2024.png" class="img-fluid hero-image"
-                    width="300" alt="Logo SESI">
-                 </div>
-            </div>
-    </section>
-    <section id="equipe">
-        <div class="container">
-            <div class="eyebrow mb-3">Quem está construindo</div>
-            <h2 class="section-title display-6">Equipe ADSync</h2>
-            <p class="muted mb-5">Estudantes de Análise e Desenvolvimento de Sistemas.</p>
-            <div class="row g-3">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="person">
-                        <div class="initial">D</div>
-                        <h3 class="h5 fw-bold">Daniel</h3>
-                        <p>Integrante da equipe</p>
-                        <hr>
-                        <p>Espaço para função, apresentação e links.</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="person">
-                        <div class="initial">M</div>
-                        <h3 class="h5 fw-bold">Matheus</h3>
-                        <p>Integrante da equipe</p>
-                        <hr>
-                        <p>Espaço para função, apresentação e links.</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="person">
-                        <div class="initial">L</div>
-                        <h3 class="h5 fw-bold">Lucas</h3>
-                        <p>Integrante da equipe</p>
-                        <hr>
-                        <p>Espaço para função, apresentação e links.</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="person">
-                        <div class="initial">D</div>
-                        <h3 class="h5 fw-bold">Diogo</h3>
-                        <p>Integrante da equipe</p>
-                        <hr>
-                        <p>Espaço para função, apresentação e links.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="col-12">
+         <div class="feature">
+          <i class="bi bi-shield-check">
+          </i>
+          <h3>
+           O que orienta nosso trabalho
+          </h3>
+          <p>
+           Clareza nas informa&ccedil;&otilde;es, responsabilidade t&eacute;cnica, simplicidade de uso e melhoria cont&iacute;nua. Preferimos resolver problemas reais a adicionar complexidade desnecess&aacute;ria.
+          </p>
+         </div>
         </div>
-    </section>
-
-    <section class="pt-0">
-        <div class="container">
-            <div class="callout d-md-flex justify-content-between align-items-center gap-4">
-                <div>
-                    <div class="eyebrow mb-2">Próximos passos</div>
-                    <h2 class="h3 fw-bold">A manutenção começa com informação.</h2>
-                    <p class="mb-md-0" style="color:#bac8d1">O ADSync está em desenvolvimento. Esta é a apresentação
-                        inicial da proposta.</p>
-                </div><a href="#inicio" class="btn btn-accent px-4 py-3 flex-shrink-0">Voltar ao início <i
-                        class="bi bi-arrow-up ms-2"></i></a>
-            </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="soft" id="numeros">
+    <div class="container">
+     <div class="row align-items-end mb-4 g-3">
+      <div class="col-lg-7">
+       <div class="eyebrow mb-3">
+        Nossa estrutura
+       </div>
+       <h2 class="section-title display-6 mb-0">
+        NexService em n&uacute;meros.
+       </h2>
+      </div>
+      <div class="col-lg-5">
+       <p class="muted mb-0">
+        Uma estrutura voltada ao desenvolvimento de projetos e ao atendimento de opera&ccedil;&otilde;es industriais.
+       </p>
+      </div>
+     </div>
+     <div class="row g-3">
+      <div class="col-6 col-lg-3">
+       <div class="number-card">
+        <strong>
+         2023
+        </strong>
+        <span>
+         Ano de funda&ccedil;&atilde;o
+        </span>
+       </div>
+      </div>
+      <div class="col-6 col-lg-3">
+       <div class="number-card">
+        <strong>
+         32
+        </strong>
+        <span>
+         Colaboradores
+        </span>
+       </div>
+      </div>
+      <div class="col-6 col-lg-3">
+       <div class="number-card">
+        <strong>
+         18
+        </strong>
+        <span>
+         Empresas atendidas
+        </span>
+       </div>
+      </div>
+      <div class="col-6 col-lg-3">
+       <div class="number-card">
+        <strong>
+         R$ 2,4 mi
+        </strong>
+        <span>
+         Faturamento bruto anual estimado
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- PORTFÓLIO: O ADSYNC É O PRODUTO PRINCIPAL, NÃO A EMPRESA -->
+   <section id="solucoes">
+    <div class="container">
+     <div class="eyebrow mb-3">
+      Nosso portf&oacute;lio
+     </div>
+     <h2 class="section-title display-6">
+      Tecnologia aplicada a cada etapa da opera&ccedil;&atilde;o.
+     </h2>
+     <p class="muted mb-5 section-intro">
+      Da abertura de uma ordem de servi&ccedil;o ao acompanhamento de equipamentos: solu&ccedil;&otilde;es que se complementam.
+     </p>
+     <div class="row g-3">
+      <div class="col-lg-6">
+       <article class="solution-main h-100">
+        <div class="d-flex justify-content-between align-items-center gap-2 mb-4">
+         <span class="badge rounded-pill bg-light text-dark">
+          Solu&ccedil;&atilde;o principal
+         </span>
         </div>
-    </section>
-    </main>
-    <footer>
-        <div class="container d-flex flex-wrap justify-content-between gap-2"><span><strong
-                    class="text-white">ADSync.</strong> Manutenção conectada à produção.</span><span>Projeto Integrador
-                · SENAI · 2026</span></div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Fecha o menu no celular após selecionar uma seção.
-        document.querySelectorAll('#menu .nav-link').forEach(function (link) { link.addEventListener('click', function () { var menu = document.getElementById('menu'); if (menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide(); }); });
-    </script>
-</body>
-
+        <i class="bi bi-clipboard2-check solution-icon">
+        </i>
+        <div class="eyebrow mt-4 mb-2">
+         ADSync &middot; Plataforma de manuten&ccedil;&atilde;o
+        </div>
+        <h3 class="display-6 fw-bold">
+         Gest&atilde;o de ordens de servi&ccedil;o
+        </h3>
+        <p>
+         Registro de chamados, classifica&ccedil;&atilde;o por criticidade, atribui&ccedil;&atilde;o de t&eacute;cnicos, hist&oacute;rico de interven&ccedil;&otilde;es e indicadores como MTTR e MTBF.
+        </p>
+        <div class="border-top border-secondary pt-3 mt-4 small">
+         Chamados  /  Atendimento  /  Hist&oacute;rico  /  Indicadores
+        </div>
+       </article>
+      </div>
+      <div class="col-lg-6">
+       <div class="row g-3 h-100">
+        <div class="col-12">
+         <article class="feature solution-secondary">
+          <i class="bi bi-activity d-block">
+          </i>
+          <h3>
+           NexMonitor
+          </h3>
+          <p>
+           Monitoramento de condi&ccedil;&otilde;es de m&aacute;quinas e sensores para apoiar inspe&ccedil;&otilde;es e identificar altera&ccedil;&otilde;es operacionais.
+          </p>
+         </article>
+        </div>
+        <div class="col-12">
+         <article class="feature solution-secondary">
+          <i class="bi bi-diagram-3 d-block">
+          </i>
+          <h3>
+           NexControl
+          </h3>
+          <p>
+           Integra&ccedil;&atilde;o de processos e apoio &agrave; automa&ccedil;&atilde;o industrial por meio de sistemas e equipamentos conectados.
+          </p>
+         </article>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- SETORES E EQUIPAMENTOS -->
+   <section class="soft" id="atuacao">
+    <div class="container">
+     <div class="eyebrow mb-3">
+      Onde atuamos
+     </div>
+     <h2 class="section-title display-6">
+      Da linha de ensacamento ao controle dos ativos.
+     </h2>
+     <p class="muted mb-5 section-intro">
+      Atua&ccedil;&atilde;o em opera&ccedil;&otilde;es que dependem de disponibilidade, rastreabilidade e manuten&ccedil;&atilde;o organizada.
+     </p>
+     <div class="row g-3">
+      <div class="col-md-6 col-lg-3">
+       <div class="asset">
+        <i class="bi bi-box-seam">
+        </i>
+        <h3>
+         Envase e ensacamento
+        </h3>
+        <p>
+         Linhas de produ&ccedil;&atilde;o, acionamentos e controle das interven&ccedil;&otilde;es.
+        </p>
+       </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+       <div class="asset">
+        <i class="bi bi-gear-wide-connected">
+        </i>
+        <h3>
+         Costura industrial
+        </h3>
+        <p>
+         Acompanhamento de m&aacute;quinas, ajustes e falhas recorrentes.
+        </p>
+       </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+       <div class="asset">
+        <i class="bi bi-nut">
+        </i>
+        <h3>
+         Processamento de materiais
+        </h3>
+        <p>
+         Trituradores, peneiras e sensores presentes na opera&ccedil;&atilde;o.
+        </p>
+       </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+       <div class="asset">
+        <i class="bi bi-cpu">
+        </i>
+        <h3>
+         Acionamentos
+        </h3>
+        <p>
+         Motores e redutores distribu&iacute;dos pelos setores produtivos.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="context-note mt-4">
+      <strong>
+       Aplica&ccedil;&atilde;o em linhas industriais.
+      </strong>
+      Gest&atilde;o de interven&ccedil;&otilde;es em m&aacute;quinas de costura, ensacadeiras, trituradores, sensores, motores e redutores.
+     </div>
+    </div>
+   </section>
+   <section id="parcerias">
+    <div class="container">
+     <div class="row g-4 align-items-center">
+      <div class="col-lg-5">
+       <div class="eyebrow mb-3">
+        Ecossistema
+       </div>
+       <h2 class="section-title display-6">
+        Conhecimento e colabora&ccedil;&atilde;o para avan&ccedil;ar.
+       </h2>
+       <p class="muted">
+        A integra&ccedil;&atilde;o com fornecedores e especialistas conecta desenvolvimento de software, componentes e opera&ccedil;&atilde;o industrial.
+       </p>
+       <p class="small muted">
+        A aproxima&ccedil;&atilde;o entre forma&ccedil;&atilde;o t&eacute;cnica e ind&uacute;stria contribui para o desenvolvimento de solu&ccedil;&otilde;es aplicadas.
+       </p>
+      </div>
+      <div class="col-lg-7">
+       <div class="row g-3">
+        <div class="col-sm-6">
+         <div class="partner">
+          <i class="bi bi-gear-wide-connected">
+          </i>
+          <h3>
+           MetalTech Componentes
+          </h3>
+          <p>
+           Componentes e suporte t&eacute;cnico industrial.
+          </p>
+          <span class="badge bg-light text-dark">
+           Parceiro tecnol&oacute;gico
+          </span>
+         </div>
+        </div>
+        <div class="col-sm-6">
+         <div class="partner">
+          <i class="bi bi-broadcast-pin">
+          </i>
+          <h3>
+           InovaSense
+          </h3>
+          <p>
+           Sensores e integra&ccedil;&atilde;o de dados operacionais.
+          </p>
+          <span class="badge bg-light text-dark">
+           Parceiro tecnol&oacute;gico
+          </span>
+         </div>
+        </div>
+        <div class="col-12">
+         <div class="partner d-flex align-items-center gap-3">
+          <img alt="Logo SENAI" class="institution-logo" src="img/SENAI_logo_2024.png"/>
+          <div>
+           <h3 class="mb-1">
+            Forma&ccedil;&atilde;o e tecnologia
+           </h3>
+           <p class="mb-0">
+            Projeto Integrador em An&aacute;lise e Desenvolvimento de Sistemas no SENAI.
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="soft" id="equipe">
+    <div class="container">
+     <div class="eyebrow mb-3">
+      Pessoas por tr&aacute;s das solu&ccedil;&otilde;es
+     </div>
+     <h2 class="section-title display-6">
+      Nossa equipe.
+     </h2>
+     <p class="muted mb-5">
+      Quatro &aacute;reas que se complementam no desenvolvimento de solu&ccedil;&otilde;es digitais.
+     </p>
+     <div class="row g-3">
+      <div class="col-sm-6 col-lg-3">
+       <article class="person">
+        <div class="initial">
+         DR
+        </div>
+        <h3>
+         Daniel
+        </h3>
+        <div class="role">
+         Diretor de Tecnologia &middot; CTO
+        </div>
+        <hr/>
+        <p>
+         Estrat&eacute;gia tecnol&oacute;gica, arquitetura dos sistemas e coordena&ccedil;&atilde;o das solu&ccedil;&otilde;es.
+        </p>
+       </article>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+       <article class="person">
+        <div class="initial">
+         M
+        </div>
+        <h3>
+         Matheus
+        </h3>
+        <div class="role">
+         Desenvolvedor Back-end
+        </div>
+        <hr/>
+        <p>
+         Regras de neg&oacute;cio, banco de dados e integra&ccedil;&atilde;o entre componentes.
+        </p>
+       </article>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+       <article class="person">
+        <div class="initial">
+         L
+        </div>
+        <h3>
+         Lucas
+        </h3>
+        <div class="role">
+         Desenvolvedor Front-end
+        </div>
+        <hr/>
+        <p>
+         Interfaces, experi&ecirc;ncia do usu&aacute;rio e adapta&ccedil;&atilde;o para diferentes telas.
+        </p>
+       </article>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+       <article class="person">
+        <div class="initial">
+         D
+        </div>
+        <h3>
+         Diogo
+        </h3>
+        <div class="role">
+         Analista de Sistemas e Qualidade
+        </div>
+        <hr/>
+        <p>
+         Levantamento de requisitos, documenta&ccedil;&atilde;o, testes e qualidade.
+        </p>
+       </article>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="contato">
+    <div class="container">
+     <div class="row g-5">
+      <div class="col-lg-5">
+       <div class="eyebrow mb-3">
+        Fale com a NexService
+       </div>
+       <h2 class="section-title display-6">
+        Converse com nossa equipe.
+       </h2>
+       <p class="muted mt-3">
+        Informa&ccedil;&otilde;es comerciais e oportunidades de colabora&ccedil;&atilde;o em tecnologia industrial.
+       </p>
+       <div class="contact-line">
+        <i class="bi bi-geo-alt">
+        </i>
+        <div>
+         <strong>
+          Unidade Ribeir&atilde;o Preto
+         </strong>
+         <div class="muted small">
+          Distrito Industrial, Ribeir&atilde;o Preto &ndash; SP
+         </div>
+        </div>
+       </div>
+       <div class="contact-line">
+        <i class="bi bi-clock">
+        </i>
+        <div>
+         <strong>
+          Atendimento
+         </strong>
+         <div class="muted small">
+          Segunda a sexta, das 8h &agrave;s 18h
+         </div>
+        </div>
+       </div>
+       <div class="contact-line">
+        <i class="bi bi-envelope">
+        </i>
+        <div>
+         <strong>
+          Contato
+         </strong>
+         <div class="muted small">
+          Atendimento pelo formul&aacute;rio
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-7">
+       <form class="contact-form p-4 p-md-5" id="contactForm">
+        <h3 class="h4 fw-bold mb-4">
+         Envie sua mensagem
+        </h3>
+        <div class="row g-3">
+         <div class="col-md-6">
+          <label class="form-label" for="nome">
+           Nome
+          </label>
+          <input class="form-control" id="nome" name="nome" placeholder="Seu nome" required=""/>
+         </div>
+         <div class="col-md-6">
+          <label class="form-label" for="email">
+           E-mail
+          </label>
+          <input class="form-control" id="email" name="email" placeholder="voce@empresa.com" required="" type="email"/>
+         </div>
+         <div class="col-12">
+          <label class="form-label" for="empresa">
+           Empresa
+          </label>
+          <input class="form-control" id="empresa" name="empresa" placeholder="Nome da empresa"/>
+         </div>
+         <div class="col-12">
+          <label class="form-label" for="mensagem">
+           Mensagem
+          </label>
+          <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Conte um pouco sobre sua necessidade" required="" rows="4"></textarea>
+         </div>
+         <div class="col-12">
+          <button class="btn btn-accent px-4 py-3" type="submit">
+           Enviar mensagem
+          </button>
+          <p class="small muted mt-3 mb-0" id="formFeedback" role="status">
+           O envio de mensagens estar&aacute; dispon&iacute;vel em uma pr&oacute;xima vers&atilde;o.
+          </p>
+         </div>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+    <div>
+     <img alt="NexService" class="footer-logo" src="img/NexServise-laranja.png" width="120"/>
+     <div class="small mt-2">
+      Tecnologia que mant&eacute;m a ind&uacute;stria em movimento.
+     </div>
+    </div>
+    <div class="small text-md-end">
+     Pagina Empresa &middot; SENAI &middot; 2026
+     <br/>
+     ADSync: sistema de gest&atilde;o de ordens de servi&ccedil;o.
+    </div>
+   </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="script.js">
+  </script>
+ </body>
 </html>
